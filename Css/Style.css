@@ -1,0 +1,105 @@
+@font-face{
+    font-family: "Vazir";
+    
+    src: url("font/Vazir-Medium.ttf") format("truetype");
+   
+  }
+  
+
+
+body {
+
+    font-family: "Vazir";
+    margin: 0;
+    padding: 0;
+    background-color: #263238;
+    color: #EEEEEE;
+}
+
+header {
+ 
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(to right,#455A64, #37474F,#455A64);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #78909C ;
+    text-decoration: none;
+    transition: all 300ms;
+}
+nav ul li a:hover{
+    color: #CFD8DC;
+}
+section {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+
+h2 {
+    color: #EEEEEE;
+}
+
+p{
+    color:#78909C;
+}
+.game {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.game img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    margin-right: 240px;
+    margin-left: 240px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+form input{
+    margin-right: 550px;
+    margin-left: 550px;
+}
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #607D8B;
+    color: white;
+    cursor: pointer;
+    transition: all 350ms;
+}
+
+form button:hover {
+    background-color: #455A64;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-image: linear-gradient(to right,#2e4650, #22323a,#2e4650);
+}
