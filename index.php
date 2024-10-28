@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Css/Style.css">
+    <link rel="stylesheet" href="Css/Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>GameLibrary</title>
 </head>
-<body>
+<body class="body1">
     
 <header>
         <h1>کتابخانه بازی</h1>
@@ -34,24 +36,26 @@
             <?php
             // آرایه‌ای از بازی‌ها
             $games = [
-                ["title" => "Call of Duty", "image" => "'image(1).jpg'"],
-                ["title" => "God of War", "image" => "'image(2).jpg'"],
-                ["title" => "Dota 2", "image" => "'image(3).jpg'"],
-                ["title" => "Ghost of Tsushima", "image" => "'image(4).jpg'"],
-                ["title" => "Elden Ring", "image" => "'image(5).jpg'"],
-                ["title" => "Dark Souls 3", "image" => "'image(6).jpg'"],
+                ["title" => "Call of Duty", "image" => "image/image(1).jpg"],
+                ["title" => "God of War", "image" => "image/image(2).jpg"],
+                ["title" => "Dota 2", "image" => "image/image(3).jpg"],
+                ["title" => "Ghost of Tsushima", "image" => "image/image(4).jpg"],
+                ["title" => "Elden Ring", "image" => "image/image(5).jpg"],
+                ["title" => "Dark Souls 3", "image" => "image/image(6).jpg"],
             ];
 
             // نمایش بازی‌ها
             
             foreach ($games as $game) {
-                echo '<div class="game">';
-                echo '<img src="' . $game["image"] . '" alt="' . $game["title"] . '">';
-                echo '<h3>' . $game["title"] . '</h3>';
+                echo '<div class="card game-card">';
+                echo '<img src="' . $game["image"] . '" class="card-img-top" alt="' . $game["title"] . '">';
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title">' . $game["title"] . '</h5>';
                 echo '</div>';
-            } 
+                echo '</div>';
+            }
             ?>
-            <img src="image" alt="">
+            
         </div>
     </section>
     
@@ -61,7 +65,7 @@
             <input type="text" placeholder="نام شما" required>
             <input type="email" placeholder="ایمیل شما" required>
             <textarea placeholder="پیام شما" required></textarea>
-            <button type="submit">ارسال</button>
+             <button type="submit" class="btn btn-success">ارسال</button>
         </form>
     </section>
     
