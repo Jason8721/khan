@@ -1,7 +1,7 @@
 @font-face{
     font-family: "Vazir";
     
-    src: url("font/Vazir-Medium.ttf") format("truetype");
+    src: url("../font/Vazir-Medium.ttf") format("truetype");
    
   }
   
@@ -127,3 +127,21 @@ footer {
     
     align-self: center;
 } 
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.team-member {
+    margin: 20px;
+}
+
+.team-member img {
+    width: 100%; /* عرض تصویر */
+    height: auto; /* حفظ نسبت تصویر */
+    border-radius: 50%; /* گرد کردن تصویر */
+}
