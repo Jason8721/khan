@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="Css/Style.css">
     <title>درباره ما</title>
 </head>
-<body>
-<?php include 'Header.php'; ?>
+<body class="body1">
+<?php
+   include 'Header.php';
+    
+
+
+?>
 
 <section id="about" class="text-center">
     <h2>درباره ما</h2>
@@ -17,7 +23,7 @@
 </section>
 
 <section id="services" class="text-center bg-light">
-    <h2>خدمات ما</h2>
+    <h2 class="services">خدمات ما</h2>
     <p>ما خدمات متنوعی را ارائه می‌دهیم:</p>
     <ul class="list-unstyled">
         <li>خدمات مشاوره</li>
@@ -49,7 +55,7 @@
 </section>
 
 <section id="contact" class="text-center bg-light">
-    <h2>تماس با ما</h2>
+    <h2 Style="color: #444;">تماس با ما</h2>
     <form>
         <div class="mb-3">
             <input type="text" class="form-control" placeholder="نام شما" required>

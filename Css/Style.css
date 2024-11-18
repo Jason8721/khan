@@ -51,6 +51,8 @@ h2 {
     color: #EEEEEE;
 }
 
+
+
 p{
     color:#78909C;
 }
@@ -80,26 +82,23 @@ p{
     border-radius: 5px;
 }
 
-form {
+#contact  {
     display: flex;
     flex-direction: column;
 }
 
-form input, form textarea {
+section  input, section  textarea {
     margin-bottom: 10px;
-    margin-right: 240px;
-    margin-left: 240px;
+    
     padding: 10px;
     border: 1px solid #444;
     border-radius: 5px;
     background-color: #333;
     color: white;
+    align-self: center;
 }
-form input{
-    margin-right: 550px;
-    margin-left: 550px;
-}
-form button {
+
+section  button {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -109,7 +108,7 @@ form button {
     transition: all 350ms;
 }
 
-form button:hover {
+section  button:hover {
     background-color: #455A64;
 }
 
@@ -120,6 +119,7 @@ footer {
 }
 .btn{
     width: 25%;
+    margin-bottom: 120px!important;
     
    
 }
@@ -127,3 +127,12 @@ footer {
     
     align-self: center;
 } 
+#services{
+    background-color: #2c5567 !important;
+}
+.form-control{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    align-self:auto;
+}
