@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="Css/Style.css">
     <title>درباره ما</title>
 </head>
-<body class="body1">
-<?php
-   include 'Header.php';
-    
+<body>
+<?php include("Header.php");?>
 
-
-?>
-
-<section id="about" class="text-center">
-    <h2>درباره ما</h2>
-    <p>ما یک تیم حرفه‌ای هستیم که به ارائه بهترین خدمات به مشتریان خود متعهد هستیم. هدف ما ایجاد تجربه‌ای بی‌نظیر برای کاربران است.</p>
-</section>
-
+<section id="about">
+        <h2>درباره ما</h2>
+        <p>در کتاب خانه بازی ها شما میتوانید انواع بازی ها در پلتفرم های مختلف  دیده و دانلود کنید.
+            این وبسایت به تازگی شروع به کار کرده و امید واریم که بتوانیم به بهترین شکل ممکن نیاز های شما را برطرف کنیم.
+        </p>
+    </section>
 <section id="services" class="text-center bg-light">
-    <h2 class="services">خدمات ما</h2>
+    <h2>خدمات ما</h2>
     <p>ما خدمات متنوعی را ارائه می‌دهیم:</p>
     <ul class="list-unstyled">
         <li>خدمات مشاوره</li>
@@ -54,23 +49,17 @@
     </div>
 </section>
 
-<section id="contact" class="text-center bg-light">
-    <h2 Style="color: #444;">تماس با ما</h2>
-    <form>
-        <div class="mb-3">
-            <input type="text" class="form-control" placeholder="نام شما" required>
-        </div>
-        <div class="mb-3">
-            <input type="email" class="form-control" placeholder="ایمیل شما" required>
-        </div>
-        <div class="mb-3">
-            <textarea class="form-control" placeholder="پیام شما" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">ارسال</button>
-    </form>
-</section>
+<section id="contact">
+        <h2>تماس با ما</h2>
+        <form>
+            <input type="text" placeholder="نام شما" required>
+            <input type="email" placeholder="ایمیل شما" required>
+            <textarea placeholder="پیام شما" required></textarea>
+             <button type="submit" class="btn btn-success">ارسال</button>
+        </form>
+    </section>
 
-<?php include 'footer.php'   ?>
+<?php include("footer.php")    ?>
 
 
 </body>
