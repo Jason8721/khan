@@ -56,7 +56,22 @@
             </div>
         </div>
     </section>
-    
+    <div class="container mt-5">
+        <h2 class="text-center">محتوای صفحه اصلی</h2>
+        <?php
+        $sql = "SELECT * FROM home_content";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<h3>" . $row["title"] . "</h3>";
+                echo "<p>" . $row["description"] . "</p>";
+            }
+        } else {
+            echo "<p>محتوایی یافت نشد.</p>";
+        }
+        ?>
+    </div>
    
     <?php include 'footer.php';    ?>
 

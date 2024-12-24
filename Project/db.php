@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>database</title>
 </head>
 <body>
-    <?php
-$servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "gamelibrary_db"; 
+<?php
+       
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $servername = "localhost";
+            $username = "root"; 
+            $password = ""; 
+            $dbname = "gamelibrary_db"; 
 
+            
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-
-if ($conn->connect_error) {
-    die("اتصال ناموفق: " . $conn->connect_error);
-}
-?>
-    
+          
+            if ($conn->connect_error) {
+                die("اتصال به پایگاه داده ناموفق بود: " . $conn->connect_error);
+            }
+        }
+           
+        ?>
+   
 </body>
 </html>
