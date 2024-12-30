@@ -28,50 +28,64 @@
         
         <div class="container">
         <div class="row justify-content-center">
-            <?php
-            
-            $games = [
-                ["title" => "Call of Duty", "image" => "image/image(1).jpg"],
-                ["title" => "God of War", "image" => "image/image(2).jpg"],
-                ["title" => "Dota 2", "image" => "image/image(3).jpg"],
-                ["title" => "Ghost of Tsushima", "image" => "image/image(4).jpg"],
-                ["title" => "Elden Ring", "image" => "image/image(5).jpg"],
-                ["title" => "Dark Souls 3", "image" => "image/image(6).jpg"],
-            ];
-
-            
-            
-            foreach ($games as $game) {
-                echo '<div class="col-4 d-flex justify-content-center">';
-                echo '<div class="card game-card">';
-                
-                echo '<img src="' . $game["image"] . '" class="card-img-top" alt="' . $game["title"] . '">';
-                echo '<div class="card-body">';
-                echo '<h5 class="card-title">' . $game["title"] . '</h5>';
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-            }
-            ?>
-            </div>
-        </div>
-    </section>
-    <div class="container mt-5">
-        <h2 class="text-center">محتوای صفحه اصلی</h2>
         <?php
-        $sql = "SELECT * FROM home_content";
+        
+        $image_directory = "C:/wamp64/www/Project/image/";
+        $images = array_diff(scandir($image_directory), array('.', '..'));
+        
+
+        foreach ($images as $image_name) {
+            $image_path = $image_directory . $image_name;
+            
+        
+            $check_sql = "SELECT * FROM images WHERE image_name = '$image_name'";
+            $check_result = $conn->query($check_sql);
+        
+            if ($check_result->num_rows == 0) {
+                
+                $sql = "INSERT INTO images (image_name, image_path) VALUES ('$image_name', '$image_path')";
+                if ($conn->query($sql) === TRUE) {
+                    echo "تصویر $image_name با موفقیت ذخیره شد.<br>";
+                } else {
+                    echo "خطا در ذخیره تصویر $image_name: " . $conn->error . "<br>";
+                }
+            } 
+        }
+        
+       
+      
+        
+       
+        $sql = "SELECT * FROM images";
         $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<h3>" . $row["title"] . "</h3>";
-                echo "<p>" . $row["description"] . "</p>";
-            }
-        } else {
-            echo "<p>محتوایی یافت نشد.</p>";
-        }
+            if ($result->num_rows > 0) {
+             echo '<div class="container">';
+         echo '<div class="row">';
+         while ($row = $result->fetch_assoc()) {
+        echo '<div class="col-md-4 my-3">';
+        echo '<div class="card">';
+        echo '<img src="' . $row['image_path'] . '" class="card-img-top" alt="' . $row['image_name'] . '">';
+        echo '<div class="card-body">';
+        echo '<h5 class="card-title">' . $row['image_name'] . '</h5>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
+     echo '</div>';
+     echo '</div>';
+} else {
+    echo "<p>هیچ تصویری یافت نشد.</p>";
+}
+
+
+
         ?>
-    </div>
+            
+           
+       
+   
+
    
     <?php include 'footer.php';    ?>
 

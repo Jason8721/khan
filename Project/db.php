@@ -6,24 +6,22 @@
     <title>database</title>
 </head>
 <body>
-<?php
-       
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $servername = "localhost";
-            $username = "root"; 
-            $password = ""; 
-            $dbname = "gamelibrary_db"; 
+<?php 
+$servername = "localhost";
+$username = "root"; 
+$password = ""; 
+$dbname = "gamelibrary_db"; 
 
-            
-            $conn = new mysqli($servername, $username, $password, $dbname);
 
-          
-            if ($conn->connect_error) {
-                die("اتصال به پایگاه داده ناموفق بود: " . $conn->connect_error);
-            }
-        }
-           
-        ?>
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+    die("خطا در اتصال به دیتابیس: " . $conn->connect_error);
+} else {
+   
+}
+?>
    
 </body>
 </html>
